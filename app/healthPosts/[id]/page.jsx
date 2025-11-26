@@ -5,7 +5,7 @@ import React from "react";
 const healthPostsDetails = async ({ params }) => {
   const { id } = await params;
   const healthPostDetails = await getSinglePost(id);
-  console.log(healthPostDetails);
+  //   console.log(healthPostDetails);
   return (
     <div>
       <div className="min-h-screen bg-gray-100 flex items-center justify-center p-6">
