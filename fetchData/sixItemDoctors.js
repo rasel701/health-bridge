@@ -1,4 +1,6 @@
 export default async function getsixDoctoresInfo() {
-  const res = await fetch("http://localhost:4000/doctors");
+  const res = await fetch(
+    "https://health-bridge-server-three.vercel.app/doctors"
+  );
   return res.json();
 }

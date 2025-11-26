@@ -4,18 +4,36 @@ import { UserAuthContext } from "@/AuthContext/AuthContext";
 import getMyHealthPost from "@/fetchData/myHealthPost";
 import Link from "next/link";
 import { useContext, useEffect, useState } from "react";
+import { toast } from "react-toastify";
 
 const MyHealthPosts = () => {
   const { user } = useContext(UserAuthContext);
   const [myPost, setMyPost] = useState([]);
+  const [reset, setReset] = useState(false);
 
   useEffect(() => {
     getMyHealthPost(user?.email).then((res) => {
-      console.log(res);
       setMyPost(res);
     });
-  }, [user?.email]);
-  console.log(myPost);
+  }, [user?.email, reset]);
+
+  const handleDeletePost = async (id) => {
+    const res = await fetch(
+      `https://health-bridge-server-three.vercel.app/health-post/${id}`,
+      {
+        method: "DELETE",
+      }
+    );
+    if (!res.ok) {
+      throw new Error("Failed to delete post");
+    }
+
+    const data = await res.json();
+    setReset(!reset);
+    if (data.deletedCount) {
+      toast.success("Health post delete successfully !");
+    }
+  };
 
   return (
     <div>
@@ -54,7 +72,12 @@ const MyHealthPosts = () => {
                     >
                       View
                     </Link>
-                    <button className="btn btn-sm btn-error">Delete</button>
+                    <button
+                      onClick={() => handleDeletePost(post._id)}
+                      className="btn btn-sm btn-error"
+                    >
+                      Delete
+                    </button>
                   </td>
                 </tr>
               ))}

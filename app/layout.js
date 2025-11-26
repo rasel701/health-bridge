@@ -3,6 +3,7 @@ import "./globals.css";
 import Navber from "./components/navber/Navber";
 import AuthContext from "@/AuthContext/AuthContext";
 import { ToastContainer } from "react-toastify";
+import Footer from "./components/Footer/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,6 +29,7 @@ export default function RootLayout({ children }) {
         <AuthContext>
           <Navber />
           {children}
+          <Footer />
           <ToastContainer />
         </AuthContext>
       </body>

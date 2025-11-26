@@ -24,10 +24,10 @@ const LoginComponent = () => {
 
         setTimeout(() => {
           router.push(redirect);
-        }, 3000);
+        }, 2000);
       })
       .catch((error) => {
-        console.log(error);
+        toast.error(error);
       });
   };
 
@@ -44,7 +44,7 @@ const LoginComponent = () => {
 
       setTimeout(() => {
         router.push(redirect);
-      }, 3000);
+      }, 2000);
     });
   };
 

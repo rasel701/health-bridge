@@ -33,14 +33,14 @@ const RegisterComponent = () => {
 
             setTimeout(() => {
               router.push(redirect);
-            }, 3000);
+            }, 2000);
           })
           .catch((error) => {
-            console.log(error);
+            toast.error(error);
           });
       })
       .catch((error) => {
-        console.log(error);
+        toast.error(error);
       });
   };
 
@@ -54,10 +54,10 @@ const RegisterComponent = () => {
 
         setTimeout(() => {
           router.push(redirect);
-        }, 3000);
+        }, 2000);
       })
       .catch((error) => {
-        console.log(error);
+        toast.error(error);
       });
   };
 

@@ -1,4 +1,6 @@
 export default async function getAllHealthPost() {
-  const res = await fetch("http://localhost:4000/health-post");
+  const res = await fetch(
+    "https://health-bridge-server-three.vercel.app/health-post"
+  );
   return res.json();
 }

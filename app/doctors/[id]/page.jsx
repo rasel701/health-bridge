@@ -9,7 +9,6 @@ const SingleDcotorsInfo = async ({ params }) => {
 
   return (
     <div>
-      <h2>single doctors info</h2>
       <div className="max-w-4xl mx-auto p-6 mt-10 bg-white shadow-lg rounded-lg">
         {/* Doctor Image */}
         <div className="flex justify-center">
