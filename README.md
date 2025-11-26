@@ -10,7 +10,7 @@ A simple health information application built with **Next.js (App Router)** and 
 ---
 
 ## 📦 GitHub Repository
-(এখানে আপনার GitHub repo link দিন)
+(https://github.com/rasel701/health-bridge)
 
 ---
 
