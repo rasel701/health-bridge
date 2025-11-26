@@ -5,12 +5,6 @@ import FeaturedDoc from "../components/FeaturedDoc/FeaturedDoc";
 const AllDoctors = async () => {
   const doctors = await getAllDoctorsInfo();
 
-  const handleSearchDoctor = async (e) => {
-    e.preventDefault();
-    const search = e.target.search.value;
-    console.log(search);
-  };
-
   return (
     <div>
       <h2 className=" text-2xl font-bold text-center my-8 text-gray-600">

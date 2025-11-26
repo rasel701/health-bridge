@@ -54,7 +54,7 @@ const MyHealthPosts = () => {
               </tr>
             </thead>
             <tbody>
-              {myPost.map((post) => (
+              {myPost?.map((post) => (
                 <tr
                   key={post._id}
                   className="border-b hover:bg-gray-100 transition duration-200"

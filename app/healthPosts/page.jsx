@@ -12,7 +12,7 @@ const HealthPost = async () => {
           All Health Posts
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {healthPosts.map((post) => (
+          {healthPosts?.map((post) => (
             <div
               key={post._id}
               className="bg-white rounded-lg p-6 shadow-md hover:shadow-xl transform hover:-translate-y-1 hover:scale-105 transition duration-300 ease-in-out"

@@ -88,7 +88,7 @@ const FeaturedDoc = ({ doctors }) => {
       ))} */}
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
-        {doctors.map((doctor) => (
+        {doctors?.map((doctor) => (
           <div key={doctor.id} className="card bg-base-100 shadow-xl">
             {/* <Image
               src={doctor.image}
