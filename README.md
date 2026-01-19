@@ -29,7 +29,7 @@ A simple health information application built with **Next.js (App Router)** and 
 
 ## 🛠️ Tech Stack
 
-- **Next.js 14 (App Router)**
+- **Next.js 16 (App Router)**
 - **NextAuth.js**
 - **Tailwind CSS**
 - **MongoDB Atlas**
